@@ -40,14 +40,14 @@ class OneRowJoinerApp:
         self.input_label = tk.Label(self.frame, text="Input (Rows):", font=("Segoe UI", 10, "bold"))
         self.input_label.grid(row=0, column=0, sticky="w", pady=(0, 5))
 
-        self.input_text = tk.Text(self.frame, height=10, width=50, font=("Segoe UI", 10))
+        self.input_text = tk.Text(self.frame, height=10, width=70, font=("Segoe UI", 10))
         self.input_text.grid(row=1, column=0, columnspan=2, pady=(0, 15))
 
         # Delimiter Section
         self.delimiter_label = tk.Label(self.frame, text="Delimiter:", font=("Segoe UI", 10, "bold"))
         self.delimiter_label.grid(row=2, column=0, sticky="w", pady=(0, 5))
 
-        self.delimiter_entry = tk.Entry(self.frame, width=10, font=("Segoe UI", 10))
+        self.delimiter_entry = tk.Entry(self.frame, width=25, font=("Segoe UI", 10))
         self.delimiter_entry.insert(0, ",")  # Default delimiter
         self.delimiter_entry.grid(row=3, column=0, sticky="w", pady=(0, 15))
 
@@ -62,7 +62,7 @@ class OneRowJoinerApp:
             font=("Segoe UI", 10, "bold"),
             bg="#f3f2f1",
             fg="black",
-            padx=10,
+            width=12,
             pady=5
         )
         self.clear_button.pack(side=tk.LEFT, padx=(0, 10))
@@ -74,7 +74,7 @@ class OneRowJoinerApp:
             font=("Segoe UI", 10, "bold"),
             bg="#0078d4",
             fg="white",
-            padx=10,
+            width=12,
             pady=5
         )
         self.join_button.pack(side=tk.LEFT)
@@ -83,7 +83,7 @@ class OneRowJoinerApp:
         self.output_label = tk.Label(self.frame, text="Output (Single Row):", font=("Segoe UI", 10, "bold"))
         self.output_label.grid(row=4, column=0, sticky="w", pady=(0, 5))
 
-        self.output_entry = tk.Entry(self.frame, width=50, font=("Segoe UI", 10))
+        self.output_entry = tk.Entry(self.frame, width=70, font=("Segoe UI", 10))
         self.output_entry.grid(row=5, column=0, columnspan=2)
 
     def clear_fields(self) -> None:
