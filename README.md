@@ -8,9 +8,10 @@ We've all been there: Copying a column of IDs or names from an Excel sheet or a 
 
 ## Highlights
 *   **Intuitive Workflow:** Designed for speed and minimal UI. Copy & paste your rows, select your separator and get your result.
+*   **One-Click Copy:** Instantly copy your joined result to the clipboard with a dedicated "Copy" button, ready to be pasted anywhere.
 *   **Dynamic Delimiters:** Complete control over your delimiters. Use normal commas or define your own multi-character strings like ` | ` or `), (`.
 *   **Smart Cleaning:** The engine automatically removes trailing whitespace and ignores empty lines, making your output professional and "noise free".
-*   **Purpose-Built:** Fixed-layout GUI that will not get lost on your screen, dedicated “Join” and “Clear” actions to keep your workflow moving.
+*   **Purpose-Built:** Fixed-layout GUI that will not get lost on your screen, dedicated “Join”, “Copy” and “Clear” actions to keep your workflow moving.
 *   **Modern Aesthetics:** Using the "Segoe UI" font and a crisp, high-contrast color scheme for a native Windows-pro feel.
 
 ## Technical background
