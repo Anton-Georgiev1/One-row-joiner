@@ -51,9 +51,24 @@ class OneRowJoinerApp:
         self.delimiter_entry.insert(0, ",")  # Default delimiter
         self.delimiter_entry.grid(row=3, column=0, sticky="w", pady=(0, 15))
 
-        # Join Button
+        # Buttons Section
+        self.button_frame = tk.Frame(self.frame)
+        self.button_frame.grid(row=3, column=1, sticky="e", pady=(0, 15))
+
+        self.clear_button = tk.Button(
+            self.button_frame,
+            text="Clear",
+            command=self.clear_fields,
+            font=("Segoe UI", 10, "bold"),
+            bg="#f3f2f1",
+            fg="black",
+            padx=10,
+            pady=5
+        )
+        self.clear_button.pack(side=tk.LEFT, padx=(0, 10))
+
         self.join_button = tk.Button(
-            self.frame, 
+            self.button_frame, 
             text="Join Rows", 
             command=self.handle_join,
             font=("Segoe UI", 10, "bold"),
@@ -62,7 +77,7 @@ class OneRowJoinerApp:
             padx=10,
             pady=5
         )
-        self.join_button.grid(row=3, column=1, sticky="e", pady=(0, 15))
+        self.join_button.pack(side=tk.LEFT)
 
         # Output Section
         self.output_label = tk.Label(self.frame, text="Output (Single Row):", font=("Segoe UI", 10, "bold"))
@@ -70,6 +85,11 @@ class OneRowJoinerApp:
 
         self.output_entry = tk.Entry(self.frame, width=50, font=("Segoe UI", 10))
         self.output_entry.grid(row=5, column=0, columnspan=2)
+
+    def clear_fields(self) -> None:
+        """Clears the input and output fields."""
+        self.input_text.delete("1.0", tk.END)
+        self.output_entry.delete(0, tk.END)
 
     def handle_join(self) -> None:
         """Handles the join button click event."""
