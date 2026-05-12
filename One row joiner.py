@@ -47,7 +47,7 @@ class OneRowJoinerApp:
         self.delimiter_label = tk.Label(self.frame, text="Delimiter:", font=("Segoe UI", 10, "bold"))
         self.delimiter_label.grid(row=2, column=0, sticky="w", pady=(0, 5))
 
-        self.delimiter_entry = tk.Entry(self.frame, width=25, font=("Segoe UI", 10))
+        self.delimiter_entry = tk.Entry(self.frame, width=20, font=("Segoe UI", 10))
         self.delimiter_entry.insert(0, ",")  # Default delimiter
         self.delimiter_entry.grid(row=3, column=0, sticky="w", pady=(0, 15))
 
@@ -66,6 +66,18 @@ class OneRowJoinerApp:
             pady=5
         )
         self.clear_button.pack(side=tk.LEFT, padx=(0, 10))
+
+        self.copy_button = tk.Button(
+            self.button_frame,
+            text="Copy",
+            command=self.copy_to_clipboard,
+            font=("Segoe UI", 10, "bold"),
+            bg="#f3f2f1",
+            fg="black",
+            width=12,
+            pady=5
+        )
+        self.copy_button.pack(side=tk.LEFT, padx=(0, 10))
 
         self.join_button = tk.Button(
             self.button_frame, 
@@ -90,6 +102,17 @@ class OneRowJoinerApp:
         """Clears the input and output fields."""
         self.input_text.delete("1.0", tk.END)
         self.output_entry.delete(0, tk.END)
+
+    def copy_to_clipboard(self) -> None:
+        """Copies the output entry content to the clipboard."""
+        result = self.output_entry.get()
+        if not result:
+            messagebox.showwarning("Warning", "Nothing to copy.")
+            return
+
+        self.root.clipboard_clear()
+        self.root.clipboard_append(result)
+        messagebox.showinfo("Success", "Copied to clipboard!")
 
     def handle_join(self) -> None:
         """Handles the join button click event."""
