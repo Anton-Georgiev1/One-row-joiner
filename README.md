@@ -1,10 +1,10 @@
 # Joiner in one row
 ### *Easily and precisely simplify your data formatting.*
 
-**One Row Joiner** is a dedicated desktop tool to help you get rid of the hassle of manually formatting text. Whether you're a developer getting ready for SQL IN clauses, a data analyst scrubbing up CSV entries, or a professional handling bulk lists, this tool converts messy, multi-line data into one, perfectly delimited row in seconds.
+**One_Row_Joiner** is a dedicated desktop tool to help you get rid of the hassle of manually formatting text. Whether you're a developer getting ready for SQL IN clauses, a data analyst scrubbing up CSV entries, or a professional handling bulk lists, this tool converts messy, multi-line data into one, perfectly delimited row in seconds.
 
 ## Its Objectives
-We've all been there: Copying a column of IDs or names from an Excel sheet or a database result and then finding out you need them in a single line separated by commas, pipes or semicolons. This is tedious and error prone when done manually. **One Row Joiner** provides a clean, visual workspace to do this task instantly so you can focus on the work that actually matters.
+We've all been there: Copying a column of IDs or names from an Excel sheet or a database result and then finding out you need them in a single line separated by commas, pipes or semicolons. This is tedious and error prone when done manually. **One_Row_Joiner** provides a clean, visual workspace to do this task instantly so you can focus on the work that actually matters.
 
 ## Highlights
 *   **Intuitive Workflow:** Designed for speed and minimal UI. Copy & paste your rows, select your separator and get your result.
@@ -21,7 +21,7 @@ The application is built with Python and a refined implementation of `tkinter` a
 1. Make sure python is installed.
 2. Start the application:
    ```powershell
-   python "One row joiner.py"
+   python One_row_joiner.py
    ```
 
 Who is this for?
@@ -30,4 +30,4 @@ Who is this for?
 *   **Administrators:** Manage system logs and bulk mailing lists with ease.
 
 ---
-*No more rows editing manually. Let **One Row Joiner** do the formatting and you do the data. *
+*No more rows editing manually. Let **One_Row_Joiner** do the formatting and you do the data. *
